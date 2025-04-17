@@ -1,16 +1,17 @@
-/*.scroll-to-top {
+.scroll-to-top {
     position: fixed;
-    bottom: 70px;
-    right: 5px;
+    bottom: 30px;
+    right: 20px;
     background: transparent;
     border: none;
     cursor: pointer;
     z-index: 9999;
-    animation: scroll-bounce 2s infinite;
+
 }
+
 .scroll-to-top img {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
 }
 
 @keyframes scroll-bounce {
@@ -31,4 +32,3 @@
         transform: translateY(-5px);
     }
 }
-*/

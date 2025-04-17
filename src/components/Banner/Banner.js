@@ -17,7 +17,7 @@ const Banner = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex((prev) => (prev + 1) % announcements.length);
-        }, 5000);
+        }, 4000);
         return () => clearInterval(interval);
     }, []);
 
@@ -66,11 +66,9 @@ const Banner = () => {
             onMouseLeave={handleMouseLeave}
         >
             {announcements.map((item, index) => (
-                <div
-                    key={item.id}
-                    className={`banner-slide ${index === activeIndex ? "active" : ""}`}
-                    style={{ backgroundImage: `url(${item.image})` }}
-                />
+                <div key={item.id} className={`banner-wrapper ${index === activeIndex ? "active" : ""}`}>
+                    <img src={item.image} className="banner-image" alt={`slide-${index}`} />
+                </div>
             ))}
 
             <div className="pagination-dots">

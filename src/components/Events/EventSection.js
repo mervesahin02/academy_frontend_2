@@ -78,33 +78,16 @@ const EventSection = () => {
 
     const scrollLeft = () => {
         if (carouselRef.current) {
-            carouselRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+            carouselRef.current.scrollBy({ left: -430, behavior: 'smooth' });
         }
     };
 
     const scrollRight = () => {
         if (carouselRef.current) {
-            carouselRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+            carouselRef.current.scrollBy({ left: 430, behavior: 'smooth' });
         }
     };
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            const container = carouselRef.current;
-            if (container) {
-                const cardWidth = container.children[0].offsetWidth + 20;
-                const maxScrollLeft = container.scrollWidth - container.clientWidth;
-
-                if (container.scrollLeft >= maxScrollLeft) {
-                    container.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    container.scrollBy({ left: cardWidth, behavior: 'smooth' });
-                }
-            }
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, []);
 
     return (
         <div className="event-section">

@@ -49,36 +49,15 @@ const NewsSection = () => {
 
     const scrollLeft = () => {
         if (carouselRef.current) {
-            carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+            carouselRef.current.scrollBy({ left: -345, behavior: 'smooth' });
         }
     };
 
     const scrollRight = () => {
         if (carouselRef.current) {
-            carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+            carouselRef.current.scrollBy({ left: 345, behavior: 'smooth' });
         }
     };
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (carouselRef.current) {
-                const container = carouselRef.current;
-                const cardWidth = container.children[0].offsetWidth + 20; // Kart genişliği + gap (20px)
-                const maxScrollLeft = container.scrollWidth - container.clientWidth;
-
-                if (container.scrollLeft >= maxScrollLeft) {
-                    // Son karta geldiysek başa dön
-                    container.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    // Değilse bir sonraki karta ilerle
-                    container.scrollBy({ left: cardWidth, behavior: 'smooth' });
-                }
-            }
-        }, 5000); // 5000ms = 5 saniye
-
-        return () => clearInterval(interval);
-    }, []);
-
     return (
         <div className="news-section">
             <div className="news-header">

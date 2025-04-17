@@ -49,7 +49,8 @@ function App() {
 
             <Communication />
             <Footer />
-
+            <ScrollIndicator />
+            <ScrollToTopButton />
 
         </ThemeProvider>
     );

@@ -3,14 +3,6 @@ import './FeaturedEducationCard.css';
 import { FaRegUser, FaClock } from 'react-icons/fa';
 import { AiFillStar } from 'react-icons/ai';
 
-const summaries = {
-    "STM32 ile Gömülü Yazılım": "Mikrodenetleyici tabanlı sistemleri sıfırdan öğrenin.",
-    "Yazılım Geliştirme Araçları": "Kodlama ortamları ve araçlarıyla hızlı başlangıç.",
-    "Unity Oyun Geliştirme Motoru": "Kendi oyununuzu tasarlamak için Unity'yi keşfedin.",
-    "Veri Bilimine Giriş": "Veri analizine giriş yaparak büyük resmi görün.",
-    "Sağlıkta Yapay Zeka": "Yapay zeka ile sağlık verilerini analiz etmeyi öğrenin.",
-    "Makine Öğrenmesi": "Modelleme ve tahminleme teknikleriyle öğrenmeye başlayın."
-};
 
 const FeaturedEducationCard = ({ image, title, instructor, level, levelClass, students, duration, rating, reviews }) => {
     const renderStars = () =>
@@ -36,13 +28,6 @@ const FeaturedEducationCard = ({ image, title, instructor, level, levelClass, st
             <div className="featured-info-box">
                 <div className="featured-info-item"><FaRegUser /> {students}</div>
                 <div className="featured-info-item"><FaClock /> {duration}</div>
-            </div>
-            <div className="featured-summary-overlay">
-                <div className="featured-summary-content">
-                    <h3>{title}</h3>
-                    <p className="featured-summary-text">{summaries[title]}</p>
-                    <p className="featured-summary-instructor">{instructor}</p>
-                </div>
             </div>
         </div>
     );

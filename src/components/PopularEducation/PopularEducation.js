@@ -89,22 +89,6 @@ const PopularEducation = () => {
         carouselRef.current?.scrollBy({ left: 300, behavior: 'smooth' });
     };
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            const container = carouselRef.current;
-            const cardWidth = container.children[0].offsetWidth + 20;
-            const maxScrollLeft = container.scrollWidth - container.clientWidth;
-
-            if (container.scrollLeft >= maxScrollLeft) {
-                container.scrollTo({ left: 0, behavior: 'smooth' });
-            } else {
-                container.scrollBy({ left: cardWidth, behavior: 'smooth' });
-            }
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, []);
-
     return (
         <div className="popular-section">
             <div className="popular-header">
@@ -116,7 +100,16 @@ const PopularEducation = () => {
             </div>
             <div className="popular-cards" ref={carouselRef}>
                 {educationData.map(edu => (
-                    <PopularEducationCard key={edu.id} {...edu} />
+                    <PopularEducationCard key={edu.id}
+                        image={edu.image}
+                        title={edu.title}
+                        instructor={edu.instructor}
+                        level={edu.level}
+                        levelClass={edu.levelClass}
+                        students={edu.students}
+                        duration={edu.duration}
+                        rating={edu.rating}
+                        reviews={edu.reviews} />
                 ))}
             </div>
         </div>

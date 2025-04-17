@@ -1,4 +1,4 @@
-/*import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./ScrollToTopButton.css";
 
 const ScrollToTopButton = () => {
@@ -23,10 +23,10 @@ const ScrollToTopButton = () => {
     return (
         visible && (
             <button className="scroll-to-top" onClick={scrollToTop}>
-                <img src="/images/ziplama.png" alt="Yukarı Çık" />
+                <img src="/images/aa.png" alt="Yukarı Çık" />
             </button>
         )
     );
 };
 
-export default ScrollToTopButton; */
+export default ScrollToTopButton; 

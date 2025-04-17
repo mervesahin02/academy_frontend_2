@@ -1,32 +1,15 @@
 /* Kart yapısı */
 .popular-card {
-    width: 232px;
+    width: 240px;
     border-radius: 16px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+
     overflow: hidden;
     background: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #94949427;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     position: relative;
-}
-
-/* Hover büyütme */
-.popular-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Sadece özet olan kartlara uygula */
-.popular-card:hover .popular-content,
-.popular-card:hover .popular-info-box,
-.popular-card:hover .popular-level,
-.popular-card:hover .popular-rating,
-.popular-card:hover .popular-instructor,
-.popular-card:hover .popular-title-text,
-.popular-card:hover .popular-image-box img {
-    filter: blur(3px);
-    transition: filter 0.3s ease;
 }
 
 /* Görsel kutusu */
@@ -42,56 +25,6 @@
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     transition: filter 0.4s ease-in-out;
-}
-
-/* Eğitim özeti tüm kartı kaplasın */
-.popular-summary-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: #d0d0d0d7;
-    color: #333;
-    z-index: 10;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    transition: opacity 0.4s ease-in-out;
-    border-radius: 16px;
-}
-
-.popular-card:hover .popular-summary-overlay {
-    opacity: 1;
-}
-
-.popular-summary-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    max-width: 200px;
-}
-
-.popular-summary-content h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0;
-    color: #222;
-}
-
-.popular-summary-text {
-    font-size: 13px;
-    line-height: 1.4;
-    color: #555;
-    margin: 0;
-}
-
-.popular-summary-instructor {
-    font-size: 13px;
-    color: #777;
-    margin: 0;
 }
 
 /* Seviye etiketi */

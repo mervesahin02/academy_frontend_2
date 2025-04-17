@@ -62,7 +62,7 @@ const educationData = [
         instructor: "Cem Aksoy",
         image: "/images/10.jpeg",
         level: "Orta Seviye",
-        levelClass: "newedu-level-intermediatee",
+        levelClass: "newedu-level-intermediate",
         students: "5.720",
         views: 75,
         duration: "3 Saat 30 Dakika",
@@ -99,24 +99,24 @@ const NewEducation = () => {
         }
     };
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (carouselRef.current) {
-                const container = carouselRef.current;
-                const cardWidth = container.children[0].offsetWidth + 20;
-                const maxScrollLeft = container.scrollWidth - container.clientWidth;
-
-                if (container.scrollLeft >= maxScrollLeft) {
-                    container.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    container.scrollBy({ left: cardWidth, behavior: 'smooth' });
-                }
-            }
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, []);
-
+    /* useEffect(() => {
+         const interval = setInterval(() => {
+             if (carouselRef.current) {
+                 const container = carouselRef.current;
+                 const cardWidth = container.children[0].offsetWidth + 20;
+                 const maxScrollLeft = container.scrollWidth - container.clientWidth;
+ 
+                 if (container.scrollLeft >= maxScrollLeft) {
+                     container.scrollTo({ left: 0, behavior: 'smooth' });
+                 } else {
+                     container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                 }
+             }
+         }, 5000);
+ 
+         return () => clearInterval(interval);
+     }, []);
+ */
     return (
         <div className="newedu-news-section">
             <div className="newedu-news-header">

@@ -1,33 +1,16 @@
 /* Kart yapısı */
 .newedu-news-card {
-    width: 233px;
+    width: 240px;
     border-radius: 16px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    background: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffffba;
+    border: 1px solid #94949427;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-/* Hover büyütme */
-.newedu-news-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Sadece özet olan kartlara uygula */
-.newedu-education-card:hover .newedu-news-card-content,
-.newedu-education-card:hover .newedu-info-box,
-.newedu-education-card:hover .newedu-level-badge,
-.newedu-education-card:hover .newedu-rating,
-.newedu-education-card:hover .newedu-instructor,
-.newedu-education-card:hover .newedu-news-card-title,
-.newedu-education-card:hover .newedu-image-box img {
-    filter: blur(3px);
-    transition: filter 0.3s ease;
-}
 
 /* Görsel kutusu */
 .newedu-image-box {
@@ -42,56 +25,6 @@
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     transition: filter 0.4s ease-in-out;
-}
-
-/* Eğitim özeti tüm kartı kaplasın */
-.newedu-summary-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: #d0d0d0d7;
-    color: #333;
-    z-index: 10;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    transition: opacity 0.4s ease-in-out;
-    border-radius: 16px;
-}
-
-.newedu-news-card:hover .newedu-summary-overlay {
-    opacity: 1;
-}
-
-.newedu-summary-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    max-width: 200px;
-}
-
-.newedu-summary-content h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0;
-    color: #222;
-}
-
-.newedu-summary-text {
-    font-size: 13px;
-    line-height: 1.4;
-    color: #555;
-    margin: 0;
-}
-
-.newedu-summary-instructor {
-    font-size: 13px;
-    color: #777;
-    margin: 0;
 }
 
 /* Seviye etiketi */

@@ -1,111 +1,78 @@
-/* Genel Banner Stili */
 .banner-container {
-    position: relative;
     width: 100%;
-    height: 70vh;
-    /* Tam ekran */
+    height: auto;
     overflow: hidden;
-    background: black;
-}
-
-/* Slider Resmi */
-.banner-slide {
-    position: absolute;
-    width: 100% !important;
-    height: 100% !important;
-    background-size: cover !important;
-    /* 📌 Görselin tam oturmasını sağla */
-    background-position: center center !important;
-    /* 📌 Orta hizalama */
-    background-repeat: no-repeat !important;
-    /* 📌 Görsel tekrarlanmasın */
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.banner-slide.active {
-    opacity: 1;
-}
-
-/* Koyu Overlay ve Başlık */
-.banner-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-/* Noktalı Navigasyon (Aşağıya aldık) */
-.pagination-dots {
-    position: absolute;
-    bottom: 10px;
-    /* Daha aşağı aldık */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-/* Normal Dot (Pasif Nokta) */
-.dot {
-    width: 9px;
-    height: 9px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Aktif Dot (Seçili Nokta) */
-.dot.active-dot {
-    width: 11px;
-    height: 11px;
-    background: #409cd1;
-    box-shadow: 0 0 10px rgba(64, 156, 209, 0.8);
-    transform: scale(1.2);
-}
-
-/* Sağ Taraf Sosyal Medya Butonları */
-.social-links {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
     gap: 10px;
+    /* Dot ile görsel arasında sabit boşluk */
 }
 
-.social-links a {
-    color: white;
-    font-size: 24px;
-    transition: color 0.3s ease;
+.banner-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    display: none;
 }
 
-.social-links a:hover {
-    color: #409cd1;
+.banner-wrapper.active {
+    display: block;
 }
 
-/* Kapatma Butonu */
-.close-icon {
-    font-size: 24px;
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Dot navigasyon */
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 8px;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
     cursor: pointer;
-    transition: color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    position: relative;
 }
 
-.close-icon:hover {
-    color: #409cd1;
+.dot:hover {
+    transform: scale(1.2);
+    background: linear-gradient(145deg, #e8e8e8, #cfcfcf);
 }
 
-.banner-container {
-    cursor: grab;
-    user-select: none;
-    /* metin seçimi engellenir */
+.dot.active-dot {
+    background: #329cb2;
+    transform: scale(1.6);
+    box-shadow: 0 0 8px rgba(94, 187, 216, 0.6);
+}
+
+
+
+@media (max-width: 768px) {
+    .banner-wrapper {
+        border-radius: 0;
+    }
+
+    .banner-image {
+        border-radius: 0;
+    }
 }
